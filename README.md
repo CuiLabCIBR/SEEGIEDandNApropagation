@@ -1,4 +1,5 @@
 # SEEGIEDandNApropagation
-Spatial, Structural and Functional Constraints on the Propagation of Interictal Epileptiform Discharges and Normal Neural Activity
-Abstract
+## Spatial, Structural and Functional Constraints on the Propagation of Interictal Epileptiform Discharges and Normal Neural Activity
+### Abstract
+
 How spatial, structural, and functional architectures shape the large-scale propagation of interictal epileptiform discharges (IEDs) and spontaneous normal neural activity remains unclear in the human brain. Using stereoelectroencephalography (SEEG) and diffusion spectrum imaging (DSI) data from 47 patients with epilepsy, we quantified propagation delays with both traveling-wave analyses and lagged-correlation estimates. Propagation delays showed a nonlinear relationship with Euclidean distance: increasing over short ranges (< ~20 mm) but plateauing across longer distances. Higher IED traveling-wave rate, stronger lagged functional connectivity, and stronger structural connectivity were each associated with shorter propagation delays. Propagation was consistently faster within intrinsic functional networks than between them, indicating that large-scale functional networks organize both pathological and physiological signal flow. Propagation velocity also increased with the quantitative anisotropy of white-matter tracts. Together, these findings establish a unified framework in which spatial distance, functional network organization, and structural pathways collectively constrain neural communication across normal and epileptiform states.
