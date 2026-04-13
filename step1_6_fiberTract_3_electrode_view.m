@@ -15,6 +15,17 @@ subG = {'sub-0001', 'sub-0002', 'sub-0003', 'sub-0004', 'sub-0005', ...
     'sub-0087', 'sub-0089', 'sub-0092', 'sub-0093', 'sub-0094', ...
     'sub-0113', 'sub-0115'};
 
+colorS = {'4291267352', '4286858482', '4282708561', '4294057291', '4281893063', ...
+    '4293708349', '4282780454', '4291525487', '4280272425', '4293651044', ...
+    '4288245501', '4280448417', '4292467262', '4282526581', '4294700112', ...
+    '4281262725', '4285520709', '4294127706', '4288240579', '4286347386', ...
+    '4293060342', '4284946925', '4290646036', '4283846629', '4294122871', ...
+    '4289359740', '4282793124', '4294704902', '4281234087', '4287019510', ...
+    '4290842039', '4281692102', '4294046486', '4289294450', '4286194847', ...
+    '4293637241', '4293637241', '4280684293', '4291626192', '4285560049', ...
+    '4288803834', '4292504641', '4281065113', '4291454669', '4288012374', ...
+    '4292388433', '4286157484'};
+
 % ===== Path Configuration =====
 ContAnatPath = 'step1_AwakeSEEG_BPfiltering_Age16Up';
 fiberTrackPath = 'step2_fiberTrack';
@@ -88,7 +99,6 @@ for nSub = 1:length(subG)
         elec_name = [subID, '-', elecU{neu}];
         elec_type = ['SEEG Electrode:', num2str(elec_Contacts), ' Contacts'];
         elec_length = 10;
-        elec_color = 4294967295;
 
         % Append to DSI Studio output matrix
         NTotal = NTotal + 1;
@@ -97,12 +107,12 @@ for nSub = 1:length(subG)
         elecInfo_DSIstudio{NTotal, 3} = [num2str(elec_location(1)), ' ', num2str(elec_location(2)), ' ', num2str(elec_location(3))];
         elecInfo_DSIstudio{NTotal, 4} = [num2str(elec_orientation(1)), ' ', num2str(elec_orientation(2)), ' ', num2str(elec_orientation(3))];
         elecInfo_DSIstudio{NTotal, 5} = num2str(elec_length(1));
-        elecInfo_DSIstudio{NTotal, 6} = num2str(elec_color);
+        elecInfo_DSIstudio{NTotal, 6} = colorS{nSub};
     end
 end
 
 % ===== Output Results =====
 % Save as CSV for DSI Studio import
-writecell(elecInfo_DSIstudio, fullfile(fiberTrackPath, 'AllElectrode_dsistudio_view.dv.csv'));
+writecell(elecInfo_DSIstudio, fullfile(fiberTrackPath, 'AllElectrode_dsistudio_view_diffSub.dv.csv'));
 % Backup MATLAB format
 save(fullfile(fiberTrackPath, 'AllElectrode_dsistudio_view.mat'), 'elecInfo_DSIstudio');

@@ -19,6 +19,6 @@ for nS = 1:length(subG)
                 IED6d0{nS}{nRun} = IEDs{nRun}{6};
         end
 end
-saveFolder = 'step4_IEDtw_polyfit_TD6d0';
-saveName = 'IEDs_meth-none_TD-6d0.mat';
-save(fullfile(saveFolder, saveName), "IED6d0");
+saveFolder = 'step4_IEDtw_TD-6d0_IT-100ms_fitting';
+saveName = 'op1_IEDs_TD-6d0.mat';
+save(fullfile(saveFolder, saveName), 'IED6d0');
