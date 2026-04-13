@@ -116,7 +116,7 @@ function IEDraster = f_find_IED(Data, delta1, delta2, slidingTwin, IEDtimeScale)
             IEDchan = nChan*ones(size(IEDtime));
             IEDraster{nTrial} = [IEDraster{nTrial}; [IEDtime', IEDchan']];
 
-            % % Visualization IED detection pipeline
+            %% Visualization IED detection pipeline
             % t = Data.time{nTrial};
             % figure; winB = 50000; winE = 110000;
             % subplot(5, 1, 1);
